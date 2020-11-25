@@ -63,9 +63,8 @@ export default function MainHeader() {
 
 const styles = StyleSheet.create({
   header: {
-    height: "35%",
+    height: "11%",
     width: "100%",
     backgroundColor: "#151516",
-    borderBottomColor: "white",
   },
 });
