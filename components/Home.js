@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
+import Header from "./Header";
 
 export default function Home() {
   return (
     <View>
-      <Text>Lets begin Instagram Clone</Text>
+      <Header />
     </View>
   );
 }
