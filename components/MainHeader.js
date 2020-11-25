@@ -10,7 +10,7 @@ const fetchFonts = () => {
   });
 };
 
-export default function Header() {
+export default function MainHeader() {
   const [fontLoaded, setFontLoaded] = React.useState(false);
   if (!fontLoaded) {
     return (
@@ -63,7 +63,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header: {
-    height: "33%",
+    height: "35%",
     width: "100%",
     backgroundColor: "#151516",
     borderBottomColor: "white",
