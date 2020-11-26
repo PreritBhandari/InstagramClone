@@ -1,10 +1,9 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { ScrollView, FlatList } from "react-native-gesture-handler";
-import story from "../assets/story /story";
+import story from "../assets/DummyDatas/story";
 
 export default function Story() {
-  console.log(story);
   return (
     <ScrollView style={{ margin: 10 }} horizontal={true}>
       <View style={{ marginRight: 15 }}>
