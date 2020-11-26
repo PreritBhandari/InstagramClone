@@ -16,7 +16,6 @@ export default function Story() {
             width: 65,
             height: 65,
             borderRadius: 50,
-
             borderWidth: 3,
             borderColor: "#e35d47",
           }}

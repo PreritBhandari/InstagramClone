@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./Home";
 import { View, Image } from "react-native";
+import Profile from "./Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -81,7 +82,7 @@ export default function Base() {
         <Tab.Screen name="Search" component={Home} />
         <Tab.Screen name="Add" component={Home} />
         <Tab.Screen name="Love" component={Home} />
-        <Tab.Screen name="Profile" component={Home} />
+        <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
