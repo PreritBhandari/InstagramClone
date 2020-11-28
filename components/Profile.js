@@ -12,7 +12,7 @@ const GridTab = createMaterialTopTabNavigator();
 
 export default function Profile() {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <ProfileHeader />
       <View
         style={{
@@ -21,7 +21,7 @@ export default function Profile() {
           opacity: 0.4,
         }}
       />
-      <View style={{ marginBottom: "45%" }}>
+      <View>
         <ScrollView
           style={{
             backgroundColor: "#151516",
@@ -77,10 +77,13 @@ export default function Profile() {
             </Text>
             <Text style={{ color: "white" }}>www.initdevelops.tech/</Text>
           </View>
+
           <View
             style={{
               flexDirection: "row",
               justifyContent: "space-around",
+              flex: 1,
+              paddingBottom: 25,
             }}
           >
             <View style={styles.infobox}>
@@ -117,6 +120,7 @@ export default function Profile() {
           <View
             style={{
               flexDirection: "row",
+              flex: 1,
               justifyContent: "space-around",
               width: "45%",
             }}
@@ -143,12 +147,14 @@ export default function Profile() {
               <Text style={styles.textTop}> Friends </Text>
             </View>
           </View>
+
           <View
             style={{
               borderBottomColor: "grey",
               borderBottomWidth: 0.4,
               opacity: 0.4,
               paddingVertical: 10,
+              marginBottom: 2,
             }}
           />
 
@@ -201,7 +207,8 @@ const styles = StyleSheet.create({
   infobox: {
     backgroundColor: "black",
     width: "30%",
-    height: "25%",
+    height: "120%",
+    marginBottom: 10,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 5,

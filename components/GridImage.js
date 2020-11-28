@@ -5,7 +5,7 @@ import story from "../assets/DummyDatas/story";
 
 export default function GridImage() {
   return (
-    <View style={{ marginBottom: "27%", backgroundColor: "#151516" }}>
+    <View style={{ paddingBottom: "22%", backgroundColor: "#151516" }}>
       <FlatList
         data={story}
         renderItem={({ item }) => (
@@ -14,13 +14,14 @@ export default function GridImage() {
               flex: 1,
               flexDirection: "column",
               margin: 0.5,
+              backgroundColor: "#151516",
             }}
           >
             <Image
               style={{
                 justifyContent: "center",
                 alignItems: "center",
-                height: 100,
+                height: 140,
               }}
               source={{ uri: item.image }}
             />
