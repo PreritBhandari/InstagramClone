@@ -2,7 +2,13 @@ import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import ProfileHeader from "./ProfileHeader";
 import { StyleSheet } from "react-native";
-import { Feather } from "react-native-vector-icons";
+
+import { Feather, MaterialCommunityIcons } from "react-native-vector-icons";
+import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import GridImage from "./GridImage";
+
+const GridTab = createMaterialTopTabNavigator();
 
 export default function Profile() {
   return (
@@ -66,14 +72,13 @@ export default function Profile() {
             >
               Enthusiastic Learner
             </Text>
-            <Text style={{ color: "white", paddingBottom: 2 }}>
+            <Text style={{ color: "white" }}>
               Sweet achieved with no sweat is never sweeter
             </Text>
             <Text style={{ color: "white" }}>www.initdevelops.tech/</Text>
           </View>
           <View
             style={{
-              paddingTop: 3,
               flexDirection: "row",
               justifyContent: "space-around",
             }}
@@ -138,6 +143,49 @@ export default function Profile() {
               <Text style={styles.textTop}> Friends </Text>
             </View>
           </View>
+          <View
+            style={{
+              borderBottomColor: "grey",
+              borderBottomWidth: 0.4,
+              opacity: 0.4,
+              paddingVertical: 10,
+            }}
+          />
+
+          <GridTab.Navigator
+            tabBarOptions={{
+              activeTintColor: "white",
+              inactiveTintColor: "grey",
+              style: {
+                backgroundColor: "#151516",
+              },
+              showLabel: false,
+              showIcon: true,
+            }}
+          >
+            <GridTab.Screen
+              name="Camera"
+              component={GridImage}
+              options={{
+                tabBarIcon: () => (
+                  <MaterialCommunityIcons name="grid" color="white" size={25} />
+                ),
+              }}
+            />
+            <GridTab.Screen
+              name="Chats"
+              component={GridImage}
+              options={{
+                tabBarIcon: () => (
+                  <MaterialCommunityIcons
+                    name="tooltip-account"
+                    color="white"
+                    size={25}
+                  />
+                ),
+              }}
+            />
+          </GridTab.Navigator>
         </ScrollView>
       </View>
     </View>
@@ -153,7 +201,7 @@ const styles = StyleSheet.create({
   infobox: {
     backgroundColor: "black",
     width: "30%",
-    height: "42%",
+    height: "25%",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 5,
