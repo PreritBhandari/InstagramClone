@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, Dimensions } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import story from "../assets/DummyDatas/story";
 
 export default function GridImage() {

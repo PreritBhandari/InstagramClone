@@ -167,6 +167,10 @@ export default function Profile() {
               },
               showLabel: false,
               showIcon: true,
+              indicatorStyle: {
+                backgroundColor: "white",
+                height: 2,
+              },
             }}
           >
             <GridTab.Screen

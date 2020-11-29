@@ -3,6 +3,8 @@ import { View, Text, StyleSheet } from "react-native";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import { Feather } from "react-native-vector-icons";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -11,6 +13,7 @@ const fetchFonts = () => {
 };
 
 export default function MainHeader() {
+  const navigation = useNavigation();
   const [fontLoaded, setFontLoaded] = React.useState(false);
   if (!fontLoaded) {
     return (
@@ -49,12 +52,14 @@ export default function MainHeader() {
           </Text>
         </View>
         <View>
-          <Feather
-            name="send"
-            style={{ padding: 10 }}
-            size={28}
-            color="white"
-          />
+          <TouchableOpacity onPress={() => navigation.navigate("ChatScreen")}>
+            <Feather
+              name="send"
+              style={{ padding: 10 }}
+              size={28}
+              color="white"
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
